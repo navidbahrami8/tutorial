@@ -1,0 +1,7 @@
+<mat-card class="home">
+  <h1>I Am Parent</h1>
+  <button mat-raised-button fxFlexFill [disabled]="isLoading" (click)="onAction()" color="primary">Action</button>
+  <section>
+    <ng-content></ng-content>
+  </section>
+</mat-card>
