@@ -16,6 +16,7 @@ import {ActionToken} from "../../../shared/action.token";
 export class ChildGirlComponent implements Action {
   isLoading: boolean = false;
   text: string = 'i am hungry'
+  url: string = 'assets/img/Girl.jpg'
   load(){
     console.log('Girl loaded')
     this.text = 'i am hungry'
@@ -25,9 +26,11 @@ export class ChildGirlComponent implements Action {
     setTimeout(() => {
       this.isLoading = false
       this.text = 'I am full and a good girl'
+      this.url = 'assets/img/11151910.jpg'
     }, 2000)
     setTimeout(() => {
       this.text = 'I m hungry'
+      this.url = 'assets/img/Girl.jpg'
     }, 20000)
   }
 }
