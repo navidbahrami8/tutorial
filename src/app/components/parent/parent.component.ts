@@ -2,7 +2,7 @@ import {Component, ContentChild, OnInit} from '@angular/core';
 import {ChildGirlComponent} from "./child-girl/child-girl.component";
 import {ChildBoyComponent} from "./child-boy/child-boy.component";
 import {Action} from "./action.interface";
-import {ActionToken} from "../../shared/action.token";
+import {ActionToken} from "../../shared/token/action.token";
 
 @Component({
   selector: 'app-parent',

@@ -1,26 +1,23 @@
 import {Component} from '@angular/core';
 import {Action} from "../action.interface";
-import {ActionToken} from "../../../shared/action.token";
+import {ActionToken} from "../../../shared/token/action.token";
 
 @Component({
   selector: 'app-child-girl',
   templateUrl: './child-girl.component.html',
   styleUrls: ['./child-girl.component.scss'],
-  providers : [
-    {
-      provide: ActionToken,
-      useExisting:ChildGirlComponent
-    }
-  ]
+  providers: [{provide: ActionToken, useExisting: ChildGirlComponent}]
 })
 export class ChildGirlComponent implements Action {
   isLoading: boolean = false;
   text: string = 'i am hungry'
   url: string = 'assets/img/Girl.jpg'
-  load(){
+
+  load() {
     console.log('Girl loaded')
     this.text = 'i am hungry'
   }
+
   onAction() {
     this.isLoading = true
     setTimeout(() => {
